@@ -1,0 +1,327 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    font-size: 14px;
+    background: #f4f6f3;
+    color: #26332e;
+}
+
+[hidden] {
+    display: none !important;
+}
+
+/* ---------- sidebar ---------- */
+.sidebar {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 220px;
+    background: #1f4a3d;
+    color: #fff;
+    padding: 24px 16px;
+}
+
+.brand {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 28px;
+}
+
+.brand small {
+    display: block;
+    font-size: 11px;
+    font-weight: 400;
+    color: #b9d1c6;
+    margin-top: 2px;
+}
+
+.sidebar nav a {
+    display: block;
+    padding: 10px 12px;
+    margin-bottom: 4px;
+    border-radius: 6px;
+    color: #d5e5dd;
+    text-decoration: none;
+}
+
+.sidebar nav a:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.sidebar nav a.active {
+    background: #fff;
+    color: #1f4a3d;
+    font-weight: 600;
+}
+
+/* ---------- isi halaman ---------- */
+.content {
+    margin-left: 220px;
+}
+
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 32px;
+    background: #fff;
+    border-bottom: 1px solid #dfe5e0;
+}
+
+.status {
+    font-size: 13px;
+}
+
+.status.on { color: #2c7a4b; }
+.status.off { color: #b03a3a; }
+.status.demo { color: #9a6a12; }
+
+.role-pilih {
+    font-size: 13px;
+}
+
+main {
+    padding: 28px 32px;
+}
+
+h1 {
+    margin: 0 0 18px;
+    font-size: 26px;
+}
+
+.pesan {
+    padding: 10px 14px;
+    border-radius: 6px;
+    margin-bottom: 18px;
+}
+
+.pesan-error {
+    background: #fbeaea;
+    border: 1px solid #efc4c4;
+    color: #8a2f2f;
+}
+
+.ringkasan {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 20px;
+}
+
+.ringkasan div {
+    background: #fff;
+    border: 1px solid #dfe5e0;
+    border-radius: 8px;
+    padding: 14px 20px;
+    min-width: 160px;
+}
+
+.ringkasan span {
+    display: block;
+    font-size: 12px;
+    color: #6a7a72;
+}
+
+.ringkasan strong {
+    font-size: 26px;
+}
+
+/* ---------- kotak tabel ---------- */
+.kotak {
+    background: #fff;
+    border: 1px solid #dfe5e0;
+    border-radius: 8px;
+}
+
+.kotak-atas {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 20px;
+}
+
+.kotak-atas h2 {
+    margin: 0;
+    font-size: 17px;
+}
+
+.kotak-atas small {
+    color: #6a7a72;
+}
+
+.alat {
+    display: flex;
+    gap: 10px;
+    padding: 0 20px 14px;
+}
+
+.alat input {
+    width: 280px;
+}
+
+input, select {
+    font: inherit;
+    padding: 7px 10px;
+    border: 1px solid #cdd6d0;
+    border-radius: 6px;
+    background: #fff;
+}
+
+.tabel-wrap {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 11px 20px;
+    text-align: left;
+    border-top: 1px solid #e8ece9;
+    white-space: nowrap;
+}
+
+th {
+    background: #f6f8f5;
+    font-size: 12px;
+    color: #5a6a62;
+}
+
+tbody tr:hover {
+    background: #fafbf9;
+}
+
+/* ---------- tombol ---------- */
+.btn, .btn-kecil {
+    font: inherit;
+    cursor: pointer;
+    border: 1px solid #cdd6d0;
+    background: #fff;
+    border-radius: 6px;
+    padding: 8px 14px;
+}
+
+.btn-utama {
+    background: #1f4a3d;
+    border-color: #1f4a3d;
+    color: #fff;
+}
+
+.btn-utama:hover {
+    background: #2a5f4f;
+}
+
+.btn-bahaya {
+    background: #b03a3a;
+    border-color: #b03a3a;
+    color: #fff;
+}
+
+.btn-kecil {
+    padding: 4px 10px;
+    font-size: 12px;
+    margin-right: 4px;
+}
+
+.btn-hapus {
+    color: #b03a3a;
+}
+
+/* ---------- dialog ---------- */
+dialog {
+    border: 1px solid #dfe5e0;
+    border-radius: 10px;
+    padding: 22px;
+    width: 400px;
+    max-width: calc(100% - 30px);
+}
+
+dialog::backdrop {
+    background: rgba(0, 0, 0, 0.35);
+}
+
+dialog h2 {
+    margin: 0 0 14px;
+    font-size: 18px;
+}
+
+dialog label {
+    display: block;
+    margin-bottom: 12px;
+    font-size: 13px;
+}
+
+dialog input, dialog select {
+    display: block;
+    width: 100%;
+    margin-top: 4px;
+}
+
+.dialog-tombol {
+    display: flex;
+    justify-content: flex-end;
+    gap: 8px;
+    margin-top: 18px;
+}
+
+#toast {
+    position: fixed;
+    right: 24px;
+    bottom: 24px;
+    background: #26332e;
+    color: #fff;
+    padding: 12px 18px;
+    border-radius: 8px;
+}
+
+/* ---------- layar kecil ---------- */
+@media (max-width: 760px) {
+    .sidebar {
+        position: static;
+        width: 100%;
+        padding: 14px 16px;
+    }
+
+    .brand {
+        margin-bottom: 10px;
+    }
+
+    .sidebar nav {
+        display: flex;
+        gap: 6px;
+    }
+
+    .sidebar nav a {
+        flex: 1;
+        text-align: center;
+        margin: 0;
+    }
+
+    .content {
+        margin-left: 0;
+    }
+
+    .topbar, main {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .ringkasan div {
+        min-width: 0;
+        flex: 1;
+    }
+
+    .alat {
+        flex-wrap: wrap;
+    }
+
+    .alat input {
+        width: 100%;
+    }
+}
