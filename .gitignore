@@ -1,0 +1,16 @@
+# Konfigurasi lokal dan rahasia
+config.local.php
+.env
+.env.*
+!.env.example
+
+# Cache dan dependensi lokal
+__pycache__/
+*.py[cod]
+node_modules/
+vendor/
+
+# Hasil uji dan backup lokal
+*.log
+backup_*.sql
+*-test-report.json
